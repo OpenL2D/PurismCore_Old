@@ -3,3 +3,11 @@ description "OpenL2D Purism libraries"
 authors "The OpenL2D Project Developers"
 copyright "Copyright © 2023 The OpenL2D Project Developers"
 license "FDPL-1.0-US"
+
+targetPath "out/"
+workingDirectory "out/"
+buildOptions "betterC"
+
+configuration "legacy" {
+	platforms "library"
+}
