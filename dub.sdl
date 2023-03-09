@@ -6,8 +6,8 @@ license "FDPL-1.0-US"
 
 targetPath "out/"
 workingDirectory "out/"
-buildOptions "betterC"
+#buildOptions "betterC"
 
 configuration "legacy" {
-	platforms "library"
+	targetType "dynamicLibrary"
 }

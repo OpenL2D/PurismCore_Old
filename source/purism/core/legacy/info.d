@@ -1,4 +1,6 @@
 /**
+ * Core version information
+ *
  * Copyright: (C) 2023 The OpenL2D Project Developers
  * License: FDPL-1.0-US
  *
@@ -10,21 +12,17 @@
  * for more details.
  */
 
-module purism.core.moc3.misc;
+module purism.core.legacy.info;
+import purism.fmt.moc3.header : maxMOC3Version;
 
-alias ID = char[64];
-alias bool32 = int;
+immutable uint psmCompatVersion = 0x04_02_0002;
 
-align(4) union XY {
-    struct {
-        float x, y;
-    }
-    float[2] raw;
+extern(C):
+
+export uint csmGetVersion() {
+    return psmCompatVersion;
 }
 
-align(4) union UV {
-    struct {
-        float u, v;
-    }
-    float[2] raw;
+export uint csmGetLatestMocVersion() {
+    return maxMOC3Version;
 }

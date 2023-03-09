@@ -1,4 +1,6 @@
 /**
+ * Misc types
+ *
  * Copyright: (C) 2023 The OpenL2D Project Developers
  * License: FDPL-1.0-US
  *
@@ -10,13 +12,20 @@
  * for more details.
  */
 
-module purism.core.moc3.canvas;
+module purism.util.types;
 
-struct CanvasInfo {
-    float pixelsPerUnit; /** Pixels per unit. */
-    float originX; /** X Origin. */
-    float originY; /** Y Origin. */
-    float canvasWidth; /** Canvas Width. */
-    float canvasHeight; /** Canvas Height. */
-    ubyte canvasFlags; /** Canvas flags. */
+alias bool32 = uint;
+
+align(4) union XY {
+    struct {
+        float x, y;
+    }
+    float[2] raw;
+}
+
+align(4) union UV {
+    struct {
+        float u, v;
+    }
+    float[2] raw;
 }

@@ -1,5 +1,8 @@
-/*
- * Copyright (C) 2023 The OpenL2D Project Developers
+/**
+ * MOC3-specific types
+ *
+ * Copyright: (C) 2023 The OpenL2D Project Developers
+ * License: FDPL-1.0-US
  *
  * This software is free software: you can redistribute and/or modify it
  * under the terms of the Free Development Public License version 1.0-US
@@ -9,8 +12,6 @@
  * for more details.
  */
 
-module purism.core.moc3;
+module purism.fmt.moc3.types;
 
-public import purism.core.moc3.header;
-public import purism.core.moc3.runtime;
-public import purism.core.moc3.sections;
+alias MOC3ID = char[64];

@@ -1,5 +1,6 @@
-/*
- * Copyright (C) 2023 The OpenL2D Project Developers
+/**
+ * Copyright: (C) 2023 The OpenL2D Project Developers
+ * License: FDPL-1.0-US
  *
  * This software is free software: you can redistribute and/or modify it
  * under the terms of the Free Development Public License version 1.0-US
@@ -9,10 +10,12 @@
  * for more details.
  */
 
-module purism;
+module purism.fmt.moc3.layout;
+import purism.fmt.moc3.header;
+import purism.fmt.moc3.sections;
 
-// MOC3 parsing functionality
-public import purism.core.moc3;
-
-// Legacy Cubism Core-compatible public API
-//public import purism.core.legacy;
+struct MOC3Layout {
+    MOC3Header header;
+    MOC3SectionOffsets sections;
+    ubyte[1152] runtimeMap;
+}
